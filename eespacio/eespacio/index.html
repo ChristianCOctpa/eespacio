@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especialidad de Desarrollo Web - CTP Aserrí</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.estrellas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent;
+  overflow: hidden;
+}
+
+.estrella {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: parpadeo 2s infinite;
+  opacity: 0.8;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+
+    header {
+      background-color: #1f1c2c;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #00ffff;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 20px;
+      font-size: 1.2em;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #2c2c54;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h2 {
+      color: #00ffff;
+    }
+
+    .card p {
+      color: #dcdde1;
+    }
+
+    .btn {
+      background-color: #00ffff;
+      color: #000;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #00cccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1f1c2c;
+      margin-top: 40px;
+      color: #aaa;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .galeria, .patrones {
+  padding: 40px 20px;
+  background-color: #1e1e2f;
+  border-top: 2px solid #00ffff;
+  border-bottom: 2px solid #00ffff;
+}
+
+.galeria h2, .patrones h2 {
+  text-align: center;
+  color: #00ffff;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contenedor-proyectos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.proyecto {
+  background-color: #2c2c54;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease-in-out;
+}
+
+.proyecto:hover {
+  transform: scale(1.05);
+}
+
+.proyecto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.proyecto h3 {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.qr {
+  display: block;
+  margin: 10px auto;
+  width: 150px;
+}
+
+.patrones ul {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.patrones ul li {
+  background-color: #2c2c54;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.patrones p, .patrones li {
+  color: #dcdde1;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+#videojuegos .card {
+  border: 2px solid #00ffff;
+  background: radial-gradient(circle at top left, #1f1c2c, #2c2c54);
+}
+
+.videojuegos {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.videojuegos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="estrellas" id="fondo-estrellas"></div>
+
+
+  <header>
+    <h1>Especialidad de Desarrollo Web</h1>
+  </header>
+
+  <section class="intro">
+    <p>Bienvenidos a la feria de especialidades técnicas 2025 del CTP de Aserrí. Explorá nuestro mundo espacial del desarrollo web.</p>
+  </section>
+
+  <section class="container">
+    <div class="card">
+      <h2>Subárea de Diseño</h2>
+      <p>Exploramos herramientas de diseño gráfico, UX/UI, edición multimedia y más.</p>
+    </div>
+
+    <div class="card">
+      <h2>Subárea de Programación</h2>
+      <p>Aprendemos lenguajes como HTML, CSS, JavaScript y creamos sitios y aplicaciones web.</p>
+    </div>
+
+    <div class="card">
+      <h2>Proyecto Estudiantil</h2>
+      <p>Este año creamos un sitio web interactivo con temática espacial y estilo neón.</p>
+      <button class="btn" onclick="mostrarDetalles()">Ver diseño gráfico</button>
+    </div>
+
+    <div class="card">
+      <h2>Etapas del Proyecto</h2>
+      <ol>
+        <li>Investigación</li>
+        <li>Prototipo</li>
+        <li>Desarrollo</li>
+        <li>Pruebas</li>
+        <li>Presentación en Feria</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Juegos Interactivos</h2>
+      <p>¡Probá nuestras actividades digitales inspiradas en el espacio!</p>
+      <ul>
+        <li>Trivia galáctica</li>
+        <li>Memorama planetario</li>
+        <li>Rompecabezas de constelaciones</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Testimonios</h2>
+      <p>"Aprender desarrollo web me hizo ver el Internet con otros ojos." - Estudiante</p>
+    </div>
+
+    <div class="card">
+      <h2>¡Visitá nuestro stand!</h2>
+      <p>Interactuá con los estudiantes, probá nuestras creaciones y llevate un recuerdo estelar.</p>
+    </div>
+  </section>
+
+  <section class="galeria">
+  <h2>Proyectos Espaciales</h2>
+  <div class="contenedor-proyectos">
+    <div class="proyecto">
+      <img src="/img/Boceto Muebleria.png" alt="Proyecto 1">
+      <h3>Landing de una nave</h3>
+    </div>
+    <div class="proyecto">
+      <img src="/img/cinema.png" alt="Proyecto 2">
+      <h3>Blog del universo</h3>
+    </div>
+    <div class="proyecto">
+      <img src="/img/sd.png" alt="Proyecto 3">
+      <h3>Tienda espacial</h3>
+    </div>
+  </div>
+  <p>Escanea el código para más información:</p>
+  <img src="/img/qr_ctpaserri.png" alt="QR de contacto" class="qr">
+</section>
+
+<section class="videojuegos container">
+  <div class="card">
+    <h2>Juego 1</h2>
+    <p>Descripción breve del juego 1.</p>
+    <button class="btn">Jugar</button>
+  </div>
+  <div class="card">
+    <h2>Juego 2</h2>
+    <p>Descripción breve del juego 2.</p>
+    <button class="btn">Jugar</button>
+  </div>
+  <div class="card">
+    <h2>Juego 3</h2>
+    <p>Descripción breve del juego 3.</p>
+    <button class="btn">Jugar</button>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 CTP de Aserrí - Especialidad de Desarrollo Web</p>
+  </footer>
+
+  <script>
+    function mostrarDetalles() {
+      alert("Nuestro diseño combina el espacio exterior con colores neón para destacar nuestras tarjetas y juegos interactivos.");
+    }
+  </script>
+
+  <script>
+  const fondo = document.getElementById('fondo-estrellas');
+  for (let i = 0; i < 150; i++) {
+    const estrella = document.createElement('div');
+    estrella.classList.add('estrella');
+    estrella.style.top = `${Math.random() * 100}%`;
+    estrella.style.left = `${Math.random() * 100}%`;
+    estrella.style.animationDuration = `${1 + Math.random() * 2}s`;
+    fondo.appendChild(estrella);
+  }
+</script>
+
+<script>
+  const quizQuestions = [
+  {
+    question: "¿Qué significa HTML?",
+    options: ["HyperText Markup Language", "Hyper Transfer Machine Language", "Home Tool Markup Language"],
+    answer: 0
+  },
+  {
+    question: "¿Qué propiedad CSS se usa para cambiar el color del texto?",
+    options: ["background-color", "font-color", "color"],
+    answer: 2
+  },
+  {
+    question: "¿Qué símbolo se usa para comentarios en JavaScript?",
+    options: ["//", "/*", "#"],
+    answer: 0
+  }
+];
+
+
+let quizScore = 0;
+let currentQuestion = 0;
+
+
+function aumentarPuntaje() {
+  quizScore++;
+}
+
+function startQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion() {
+  const quizCard = document.getElementById('quizCard');
+  const quizContent = document.getElementById('quizContent');
+  const q = quizQuestions[currentQuestion];
+
+  let optionsHtml = "";
+  q.options.forEach((opt, i) => {
+    optionsHtml += `<button class="btn" style="margin: 5px;" onclick="checkAnswer(${i})">${opt}</button>`;
+  });
+
+  quizContent.innerHTML = `
+    <h3>${q.question}</h3>
+    ${optionsHtml}
+  `;
+}
+
+function checkAnswer(selected) {
+  const correct = quizQuestions[currentQuestion].answer;
+  if (selected === correct) {
+    score++;
+  }
+  currentQuestion++;
+  if (currentQuestion < quizQuestions.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  const quizContent = document.getElementById('quizContent');
+  quizContent.innerHTML = `
+    <h3>¡Completado!</h3>
+    <p>Tu puntuación: ${score} de ${quizQuestions.length}</p>
+    <button class="btn" onclick="startQuiz()">Reintentar</button>
+  `;
+}
+</script>
+<script>
+  function toggleSection(id) {
+    const seccion = document.getElementById(id);
+    const secciones = document.querySelectorAll('section');
+    
+    // Oculta todas las secciones excepto el header y footer
+    secciones.forEach(s => {
+      if (s.id !== id) {
+        s.classList.add('hidden');
+      }
+    });
+
+    // Muestra la sección deseada o la oculta si ya está visible
+    if (seccion.classList.contains('hidden')) {
+      seccion.classList.remove('hidden');
+      seccion.scrollIntoView({ behavior: 'smooth' });
+
+      if (id === 'juegos') {
+        iniciarJuego();
+      }
+    } else {
+      seccion.classList.add('hidden');
+    }
+  }
+
+  let ctx, x, y, score, size = 30; 
+
+  function iniciarJuego() {
+    const canvas = document.getElementById('juegoCanvas');
+    if (!canvas) return;
+
+    ctx = canvas.getContext('2d');
+    x = Math.random() * (canvas.width - size);
+    y = Math.random() * (canvas.height - size);
+    score = 0;
+    drawSquare();
+
+    // Asegurar que no se agregue más de un listener
+    canvas.onclick = function (e) {
+      const rect = canvas.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickY = e.clientY - rect.top;
+
+      if (
+        clickX >= x &&
+        clickX <= x + size &&
+        clickY >= y &&
+        clickY <= y + size
+      ) {
+        score++;
+        x = Math.random() * (canvas.width - size);
+        y = Math.random() * (canvas.height - size);
+        drawSquare();
+      }
+    };
+  }
+
+  function drawSquare() {
+    ctx.clearRect(0, 0, 300, 300);
+    ctx.fillStyle = '#00ffff';
+    ctx.fillRect(x, y, size, size);
+  }
+</script>
+
+</body>
+</html>
